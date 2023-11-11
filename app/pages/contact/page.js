@@ -1,9 +1,9 @@
 import React from 'react'
-import About from './about'
+import Contact from './contact'
 
 const page = () => {
   return (
-    <About/>
+    <Contact/>
   )
 }
 
