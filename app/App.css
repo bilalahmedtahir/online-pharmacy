@@ -10,8 +10,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    max-width: 80%;
-    margin: 20px auto;
     background-color: white;
   }
   
@@ -21,7 +19,7 @@ body {
 
   /* Header container */
 .header {
-    background-color: #1890ff; /* Background color for the header */
+    background-color: white; /* Background color for the header */
     padding: 16px; /* Padding around the header */
     color: #fff; /* Text color for the header content */
   }
@@ -34,7 +32,8 @@ body {
   
   /* Logo styling */
   .logo {
-    max-width: 100%; /* Ensure the logo fits within its container */
+    max-width: 100px; /* Ensure the logo fits within its container */
+    max-height: 50px;
   }
   
   /* Search bar styling */
