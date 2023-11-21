@@ -1,8 +1,4 @@
-import {
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
+"use client"
 import { Menu, Row, Col, Space } from "antd";
 import "../App.css";
 import Image from "next/image";
@@ -13,52 +9,46 @@ import {
   SettingFilled,
   SmileOutlined,
   SyncOutlined,
+  AppstoreOutlined,
+  MailOutlined,
 } from "@ant-design/icons";
+import { useRouter } from 'next/navigation'
 
 const items = [
   {
     label: "Home",
-    key: "home",
+    key:"/",
     icon: <MailOutlined />,
   },
   {
     label: "About Us",
-    key: "app",
-    icon: <AppstoreOutlined />,
-  },
-  {
-    label: "Covid-19",
-    key: "SubMenu",
-    icon: <SettingOutlined />,
-  },
-  {
-    label: "Check Report",
-    key: "food",
-    icon: <AppstoreOutlined />,
-  },
-  {
-    label: "Gallery",
-    key: "support",
+    key: "/about",
     icon: <AppstoreOutlined />,
   },
   {
     label: "Pharmacy",
-    key: "care",
+    key: "/pharmacy",
     icon: <AppstoreOutlined />,
   },
   {
     label: "Search Doctors",
-    key: "care",
+    key: "/doctors",
     icon: <AppstoreOutlined />,
   },
   {
     label: "Contact us",
-    key: "care",
+    key: "/contact",
     icon: <AppstoreOutlined />,
   },
 ];
 
 const Header = () => {
+  const router = useRouter()
+
+  const handleClick = (e) => {
+    const key = e.key;
+    router.push(key)
+  }
   return (
     <>
       <Row
@@ -97,7 +87,7 @@ const Header = () => {
         </Col>
         <Col span={18}>
           <Menu 
-          mode="horizontal" items={items} />;
+          mode="horizontal" items={items} onClick={handleClick} />;
         </Col>
       </Row>
     </>
