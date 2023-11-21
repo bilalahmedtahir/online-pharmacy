@@ -1,5 +1,5 @@
 export async function GET() {
-    const res = await fetch('https://17cf953e-8d11-41c0-9b61-f0313dff41ed.mock.pstmn.io/getMed',)
+    const res = await fetch('https://655cabe925b76d9884fdbed3.mockapi.io/api/v1/medicine',)
     const data = await res.json()
    
     return Response.json( data )
